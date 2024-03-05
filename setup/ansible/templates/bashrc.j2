@@ -11,7 +11,6 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-
 #
 # Sfecific configuration
 #
@@ -33,9 +32,9 @@ alias anv='ansible-vault'
 alias ande="ansible-doc $1 | sed -n '/^EXAMPLE/,$p' | more"
 
 alias crm='docker rm -f $(docker ps -aq)'
+alias dirm='docker image prune -f'  
 alias irm='docker rmi -f $(docker images -aq)'
 alias vrm='docker volume rm -f $(docker volume ls -q)'
 alias nrm='docker network prune -f'
 
 {% endif %}
-
